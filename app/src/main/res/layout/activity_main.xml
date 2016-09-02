@@ -24,7 +24,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:maxLines="1" />
+        android:maxLines="1"
+        android:maxLength="14"
+        android:ellipsize="end"
+        android:singleLine="true"/>
 
     <Button
         android:layout_width="70dp"

@@ -249,15 +249,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
-                if(operacionDisp.length <=13){
+                //if(operacionDisp.length <=13){
                     if(operacionDisp[0]=='0'&&!hayPunto){
                         display.setText("9");
                     }else {
                         display.setText(disp + "9");
                     }
-                }else{
-                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
-                }
+                //}else{
+                 //   Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
+                //}
 
             }
         });
