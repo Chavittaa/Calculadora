@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,28 +39,60 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"1");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("1");
+                }
+                if(escero!=0){
+                 display.setText(disp+"1");
+                }
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"2");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("2");
+                }
+                if(escero!=0){
+                    display.setText(disp+"2");
+                }
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"3");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("3");
+                }
+                if(escero!=0){
+                    display.setText(disp+"3");
+                }
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"4");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("4");
+                }
+                if(escero!=0){
+                    display.setText(disp+"4");
+                }
             }
         });
 
@@ -67,38 +100,77 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"5");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("5");
+                }
+                if(escero!=0){
+                    display.setText(disp+"5");
+                }
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"6");
+                if(!disp.equals("0.")){
+                int escero = Integer.parseInt(disp.toString().replace(".",""));
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("6");
+                }
+                if(escero!=0){
+                    display.setText(disp+"6");
+                }}if(disp.equals("0.")){
+                    display.setText(disp+"6");
+                }
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"7");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("7");
+                }
+                if(escero!=0){
+                    display.setText(disp+"7");
+                }
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                display.setText(disp+"8");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("8");
+                }
+                if(escero!=0){
+                    display.setText(disp+"8");
+                }
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                if(disp.equals("0")){
-                    display.setText("0");
-                }else {
-                    display.setText(disp + "0");
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
+                    display.setText("9");
+                }
+                if(escero!=0){
+                    display.setText(disp+"9");
                 }
             }
         });
@@ -106,10 +178,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                if(disp.equals("0")){
+                int escero = Integer.parseInt(disp.toString());
+                System.out.println(escero);
+                if(escero==0){
+                    System.out.println("el numero es cero, lo quitamos");
                     display.setText("0");
-                }else {
-                    display.setText(disp + "0");
+                }
+                if(escero!=0){
+                    display.setText(disp+"0");
                 }
             }
         });
@@ -123,6 +199,8 @@ public class MainActivity extends AppCompatActivity {
                     band = false;
                 }else{
                     display.setText(disp);
+                    Toast toastPunto = Toast.makeText(getApplicationContext(), "Ya tienes un punto", Toast.LENGTH_SHORT);
+                    toastPunto.show();
                 }
             }
         });
@@ -169,12 +247,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Editable disp = display.getText();
                 display.setText("0");
+                band = true;
             }
         });
         btnLimpia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 display.setText("0");
+                band = true;
             }
         });
 
