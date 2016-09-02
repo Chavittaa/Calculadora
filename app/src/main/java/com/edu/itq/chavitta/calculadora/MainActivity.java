@@ -39,60 +39,100 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("1");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                 display.setText(disp+"1");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("1");
+                    }else {
+                        display.setText(disp + "1");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("2");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"2");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("2");
+                    }else {
+                        display.setText(disp + "2");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("3");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"3");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("3");
+                    }else {
+                        display.setText(disp + "3");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("4");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"4");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("4");
+                    }else {
+                        display.setText(disp + "4");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
@@ -100,62 +140,99 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("5");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"5");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("5");
+                    }else {
+                        display.setText(disp + "5");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                if(!disp.equals("0.")){
-                int escero = Integer.parseInt(disp.toString().replace(".",""));
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("6");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"6");
-                }}if(disp.equals("0.")){
-                    display.setText(disp+"6");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                     display.setText("6");
+                    }else {
+                        display.setText(disp + "6");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("7");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"7");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("7");
+                    }else {
+                        display.setText(disp + "7");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("8");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"8");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("8");
+                    }else {
+                        display.setText(disp + "8");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -163,30 +240,50 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("9");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"9");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("9");
+                    }else {
+                        display.setText(disp + "9");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Editable disp = display.getText();
-                int escero = Integer.parseInt(disp.toString());
-                System.out.println(escero);
-                if(escero==0){
-                    System.out.println("el numero es cero, lo quitamos");
-                    display.setText("0");
+                char[] operacionDisp = disp.toString().toCharArray();
+
+                boolean hayPunto=false;
+                for (int i=0; i<operacionDisp.length;i++){
+                    if(operacionDisp[i]=='.'){
+                        hayPunto=true;
+                    }
                 }
-                if(escero!=0){
-                    display.setText(disp+"0");
+
+                if(operacionDisp.length <=13){
+                    if(operacionDisp[0]=='0'&&!hayPunto){
+                        display.setText("0");
+                    }else {
+                        display.setText(disp + "0");
+                    }
+                }else{
+                    Toast.makeText(MainActivity.this, "Limite de numeros", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
@@ -213,6 +310,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText("0");
                 }else {
                     display.setText("(" + disp + ")/");
+                    band=true;
                 }
             }
         });
@@ -221,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Editable disp = display.getText();
                 display.setText(disp+"-");
+                band=true;
             }
         });
         btnMas.setOnClickListener(new View.OnClickListener() {
@@ -228,6 +327,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Editable disp = display.getText();
                 display.setText(disp+"+");
+                band=true;
             }
         });
         btnPor.setOnClickListener(new View.OnClickListener() {
@@ -240,6 +340,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText("0");
                 }else{
                 display.setText("("+disp+")");
+                    band=true;
             }}
         });
         btnIgual.setOnClickListener(new View.OnClickListener() {
